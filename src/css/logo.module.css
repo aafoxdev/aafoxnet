@@ -1,0 +1,27 @@
+.basic {
+    font-size: var(--heading2);
+    font-weight: 700;
+    letter-spacing: 0.15em;
+}
+/*
+.box{
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    display: inline-block;
+    padding: 1em 2em;
+    background-color: var(--gray-75);
+    color: var(--white);
+    font-size:var(--small-heading2);
+}
+*/
+.box {
+    display: block;
+    width: 170px;
+}
+
+@media (max-width: 850px) {
+    .box {
+        width: 65px;
+        margin-top:0px;
+    }
+}

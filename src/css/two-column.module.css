@@ -1,0 +1,47 @@
+.flexContainer{
+    composes: sideBySide from './utils.module.css';
+    gap: var(--space-md);
+    margin: var(--space-md) 0 var(--space-lg);
+}
+
+@media(min-width: 768px){
+    .flexContainer {
+        display: flex;
+        flex-direction: row;
+        gap: var(--space-md); /* Adjust the gap size according to your design */
+        margin: var(--space-md) 0 var(--space-lg); /* Adjust the margin size according to your design */
+    }
+    
+    .main {
+        flex: 1;
+        min-width: 0; /* Add this to prevent flex items from overflowing */
+    }
+    
+    .sidebar {
+        width: 240px; /* You may adjust this width to fit your design */
+        position: sticky;
+        top: 40px;
+        align-self: flex-start;
+    }
+    /*
+    .main {
+        width: 768px;
+    }
+    .sidebar{
+        width: 240px;
+        position: sticky;
+        top: 40px;
+        align-self: flex-start;
+    
+    }
+    .sidebar *{
+        text-align: left;
+    }
+    .sidebar :is(div, ul){
+        width: fit-content;
+        margin-left: auto;
+        place-items: flex-end;
+        place-content: flex-end;
+    }
+    */
+}

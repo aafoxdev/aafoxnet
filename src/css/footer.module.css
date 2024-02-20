@@ -1,0 +1,92 @@
+.wrapper{
+    padding: var(--space-xl) 0;
+    background-color: var(--orange)
+}
+
+.flexContainer {
+    composes: sideBySideCenter from './utils.module.css';
+    gap: 2em;
+    z-index: 5;
+}
+
+.footer {
+    width: 100vw;
+    bottom: 0;
+    left: 0;
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .footerDiv {
+    background-color: #4478e3;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  .svgContainer {
+    width: 100%;
+    height: auto;
+    position: absolute; /* 波を背景にするためにabsoluteに設定 */
+    
+  }
+  
+  .arrow {
+    stroke-width: .3px;
+    stroke: #ffa9d4;
+  }
+  
+  .topball {
+    animation: ball 1.5s ease-in-out infinite alternate;
+    cursor: pointer;
+  }
+  
+  .wave {
+    fill: #ffb8db;
+    animation: wave 3s linear infinite;
+    z-index: -1;
+  }
+  
+  .drop {
+    fill: transparent;
+    stroke: #fda5d1;
+    stroke-width: 0.5;
+    opacity: .6;
+    animation: drop 5s ease infinite;
+  }
+  
+  .drop1 { transform-origin: 20px 3px; }
+  .drop2 { animation-delay: 3s; transform-origin: 25px 3px; }
+  .drop3 { animation-delay: -2s; animation-duration: 3.4s; transform-origin: 16px 3px; }
+  
+  .gooeff { filter: url(#goo); }
+
+  /* Footer.module.css */
+  .wave1 { fill: #db589a; } /* 例えば、青 */
+  .wave2 { fill: #ffb8db; } /* 濃い青 */
+  .wave3 { fill: #ffb8db; } /* もっと濃い青 */
+
+  /* 既存のCSSに追加 */
+  .topball, .topball .arrow {
+    cursor: pointer; /* マウスカーソルをポインターに変更 */
+    pointer-events: all; /* クリックイベントを確実に受け取る */
+    z-index: 10; /* 明示的に前面に配置 */
+    position: relative;
+  }
+  
+  @keyframes drop {
+    0%, 80% { transform: translateY(80%); opacity: .6; }
+    90% { transform: translateY(10%); opacity: .6; }
+    100% { transform: translateY(0) scale(1.5); stroke-width: 0.2; opacity: 0; }
+  }
+  
+  @keyframes wave {
+    to { transform: translateX(-100%); }
+  }
+  
+  @keyframes ball {
+    to { transform: translateY(20%); }
+  }

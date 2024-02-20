@@ -1,0 +1,27 @@
+.default {
+    width: 92%;
+    max-width: 1152px;
+    margin: 0 auto;
+    padding-bottom: 80px;
+}
+
+.large{
+    composes: default;
+    max-width: 1280px;
+    padding-bottom: 80px;
+}
+
+@media (max-width: 850px) {
+    .default {
+        width: 92%;
+        max-width: 1152px;
+        margin: 0 auto;
+        margin-top: 70px;
+    }
+    
+    .large{
+        composes: default;
+        max-width: 1280px;
+        margin-top: 70px;
+    }
+}

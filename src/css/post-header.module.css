@@ -1,0 +1,38 @@
+.stack {
+    padding: var(--space-sm) 0;
+  }
+  
+  .stack > * + * {
+    margin-top: var(--stack-space, 1em);
+  }
+  
+  .subtitle {
+    font-size: var(--small-heading2);
+    font-weight: 700;
+  }
+  
+  .title {
+    --stack-space: 0.2em;
+  }
+  
+  .dateContainer {
+    display: flex;
+    gap: 16px; /* 要素間の間隔 */
+    align-items: center; /* 中央揃えにする */
+}
+
+  .publish {
+    display: flex;
+    gap: 0.5em;
+    color: var(--gray-50);
+    font-size: var(--small-heading3);
+  }
+
+  .update {
+    display: flex;
+    gap: 0.5em;
+    color: var(--gray-50);
+    font-size: var(--small-heading3);
+  }
+  
+  

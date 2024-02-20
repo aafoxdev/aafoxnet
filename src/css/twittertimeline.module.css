@@ -1,0 +1,10 @@
+.twitterTimelineContainer {
+  margin-top: 20px;
+  }
+@media(min-width: 768px){
+.twitterTimelineContainer {
+  margin-top: 20px;
+  width:100%;
+  overflow: hidden; /* Hide overflow */
+  }
+}

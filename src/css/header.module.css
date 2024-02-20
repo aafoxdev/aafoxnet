@@ -1,0 +1,35 @@
+.flexContainer{
+    composes: spaceBetween from './utils.module.css'
+}
+
+.headerInner {
+    max-width: 1920px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 850px) {
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ffffff;
+        height: 70px;
+        z-index: 10;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+      }
+    .headerInner {
+        padding-left: 20px;
+        padding-right: 20px;
+        height: 100%;
+        position: relative;
+      }
+}

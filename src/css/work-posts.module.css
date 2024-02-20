@@ -1,0 +1,50 @@
+.workContainer {
+    padding: auto;
+    background-color: #f8f8f8;
+    padding-top: 45px;
+    padding-bottom: 55px;
+    width: 100%;
+    margin-bottom: 30px;
+    border-radius: 20px;
+  }
+
+.workContainer h2{
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 25px;
+}
+
+.figureContainer {
+    position: relative; /* Imageコンポーネントのlayout="fill"を正しく機能させる */
+    width: 325px; /* 画像の幅 */
+    height: 200px; /* 画像の高さ */
+    overflow: hidden; /* はみ出した画像を非表示にする */
+  }
+
+.itemList{
+  display: flex;
+  padding-top: 40px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  overflow: scroll;
+  overflow-y:hidden;
+}
+
+.itemList li{
+    flex-shrink: 0;
+    width: 325px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: auto;
+  }
+  
+  .post h2 {
+    margin-top: 0.5em;
+    font-size: var(--small-heading3);
+    font-weight: 400;
+  }
+  
+ 
+  
