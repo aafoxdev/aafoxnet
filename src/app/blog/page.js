@@ -42,7 +42,7 @@ export default async function Blog() {
   
   // slugがwebsite、game以外のカテゴリーに属する投稿のみをフィルタリング
   const filteredPosts = allPosts.filter(post =>
-    post.categories.some(category => category.slug !== 'website' && category.slug !== 'game')
+    post.categories.some(category => category.slug !== 'website' && category.slug !== 'game' && category.slug !== 'about')
   );
 
   // eyecatchの処理
