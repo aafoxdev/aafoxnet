@@ -33,6 +33,7 @@ export default async function Work() {
       title="Work"
       subtitle="Athenai's Work List"
       imageOn
+      buttonOn
       />
       <Posts posts={websiteposts} postname={"WEBサイト"}/>
       <Posts posts={gameposts} postname={"ゲーム"}/>

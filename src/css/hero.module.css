@@ -22,6 +22,47 @@
     width: 100%;
 }
 
+/*== ボタン共通設定 */
+.btn{
+    /*アニメーションrelative指定*/
+    position: relative;
+    overflow: hidden;
+    /*ボタンの形状*/
+    text-decoration: none;
+    display: inline-block;
+    border: 1px solid #ffcbcb; /* 黒色の枠 */
+    padding: 10px 30px;
+    text-align: center;
+    outline: none; 
+    transition: ease .2s;
+    text-align: center;
+    border-radius: 24px;
+    margin-top: 15px;
+    font-weight: 500;
+    color: rgb(71, 61, 61);
+}
+
+.bgleft:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+     /*色や形状*/
+    background:#ffcbcb;
+    width: 100%;
+    height: 100%;
+    transition: transform .6s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+    transform: scale(0, 1);
+   transform-origin: right top;
+  }
+  
+  /*hoverした際の形状*/
+  .bgleft:hover:before{
+   transform-origin:left top;
+   transform:scale(1, 1);
+  }
+
 @media (min-width: 768px) {
     .image{
         width:50%;
